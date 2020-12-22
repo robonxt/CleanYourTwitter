@@ -14,8 +14,9 @@ A: This is a adblock filter list to block annoying elements on Twitter.
 Q: How do I use it?
 
 A: 
-1. Read and follow this: https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
-2. Profit
+1. Copy the RAW link for the .txt file: https://raw.githubusercontent.com/robonxt/CleanYourTwitter/master/CleanYourTwitter.txt
+2. Read and follow this: https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
+3. Profit
 
 Q: I got a problem!
 
