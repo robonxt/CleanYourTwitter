@@ -1,4 +1,4 @@
-# USE AT YOUR OWN RISK. NOT RESPONSIBLE FOR ANYTHING THAT THIS LIST DOES. PERSONAL USE ONLY. NO COMMERCIAL USE. 
+# USE AT YOUR OWN RISK. NOT RESPONSIBLE FOR ANYTHING THAT THIS LIST DOES. PERSONAL USE ONLY. 
 Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening.
 
 Tested on uBlock Origin. May work with other Adblockers.
