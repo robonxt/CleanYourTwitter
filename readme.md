@@ -3,7 +3,7 @@ Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Fol
 
 Tested on uBlock Origin. May work with other Adblockers.
 
-Last updated: Check the last commit!
+Last updated: Check the commit changelogs here: https://github.com/robonxt/CleanYourTwitter/commits/master
 
 ### Q&A
 
