@@ -2,7 +2,7 @@
 ! Dev: robonxt
 ! Description: Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening
 ! Homepage: https://github.com/robonxt/CleanYourTwitter
-! Last updated: December 26, 2020
+! Last updated: January 10, 2021
 
 ! How to use: https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
 
@@ -20,8 +20,6 @@ twitter.com##div[aria-label$="Retweeted"] [data-testid="UserCell"]
 twitter.com##div[aria-label^="Timeline"] div [role="heading"]:has-text(Who to follow)
 twitter.com##div[aria-label^="Timeline"] [href^="/i/related_users"]
 twitter.com##div[aria-label^="Timeline"]  > div > div :has-text(Who to follow)
-twitter.com##div[aria-label^="Timeline"] div:matches-css(height:10px)
-twitter.com##div[aria-label^="Timeline"] div:matches-css(height:1px)
 twitter.com##div[data-testid="sidebarColumn"] aside[role="complementary"][aria-label="Who to follow"] div:nth-ancestor(2)
 twitter.com##div[aria-label="Timeline: Trending now"]
 twitter.com##aside[aria-label="Who to follow"]
@@ -35,7 +33,7 @@ twitter.com##div[data-testid="sidebarColumn"] .r-t23y2h:has(div[aria-label="Time
 twitter.com##div[aria-label^="Timeline:"]:not([aria-label$="Topics"]):not([aria-label$="Explore"]) .r-1adg3ll:has(a[href^="/i/"]:has-text(/^More Topics|Show more/i)):has(:not(span:has-text(/^Show more replies/i)))
 twitter.com##div[aria-label^="Timeline:"]:not([aria-label$="Topics"]) .r-qklmqi:has([aria-labelledby*="topic-not-interested-button"])
 twitter.com##div[aria-label="Timeline: Explore"] div[data-testid="UserCell"]:upward(2)
-twitter.com##.r-1adg3ll:has(article[role="article"]:has-text(Promoted))
+!twitter.com##.r-1adg3ll:has(article[role="article"]:has-text(Promoted))
 twitter.com##.r-1adg3ll:has(a[href="/i/timeline"]):has(div:matches-css(min-width: 70px))
 twitter.com##.r-1adg3ll:has(div[aria-label="Timeline: Carousel"])
 twitter.com##.r-qklmqi:has(h2:has(span:has-text(/^People|More replies/i)))
