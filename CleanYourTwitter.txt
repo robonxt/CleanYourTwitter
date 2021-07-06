@@ -1,19 +1,19 @@
 ! Title: CleanYourTwitter
 ! Dev: robonxt
-! Description: Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening
+! Description: Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening, and other annoyances.
 ! Homepage: https://github.com/robonxt/CleanYourTwitter
-! Last updated: March 27, 2021
+! Last updated: July 06, 2021
 
 ! How to use: https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
 
-! A BIG THANK YOU to https://github.com/krisu5/ and the r/uBlockOrigin community on reddit for the different types of filters!
+! Credits: A BIG THANK YOU to https://github.com/krisu5/ and the r/uBlockOrigin reddit community for doing the initial hard work on the different Twitter filters!
 
-! removes promoted tweets (ads). thanks to reddit.
+! removes "promoted tweets (ads)". thanks to reddit.
 twitter.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert|Реклама/)
 !twitter.com##[data-focusable="true"]:has-text(/Promoted|Gesponsert|Реклама/)
 !twitter.com##[data-focusable="false"]:has-text(/Promoted|Gesponsert|Реклама/)
 
-! removes the Who to follow section. thanks to reddit.
+! removes the "who to follow" section. thanks to reddit.
 twitter.com##div[aria-label$="Tweets"] [data-testid="UserCell"]
 twitter.com##div[aria-label$="Your Home Timeline"] [data-testid="UserCell"]
 twitter.com##div[aria-label$="Retweeted"] [data-testid="UserCell"]
@@ -24,7 +24,7 @@ twitter.com##div[data-testid="sidebarColumn"] aside[role="complementary"][aria-l
 twitter.com##div[aria-label="Timeline: Trending now"]
 twitter.com##aside[aria-label="Who to follow"]
 
-! removes suggestions. thanks to krisu5 (https://github.com/krisu5/)
+! removes "suggestions". thanks to krisu5 (https://github.com/krisu5/)
 twitter.com##body:has(div[aria-label^="Timeline: Search"]) .r-1adg3ll:has(a[href^="/search?q="][href$="&src=related_query_click"])
 twitter.com##body:not(:has(div[aria-label="Timeline: Explore"])) .r-qklmqi:has(span.r-1qd0xha:has-text(/^See more about this Topic/i))
 !twitter.com##div[data-testid="primaryColumn"] .css-1dbjc4n:has(div[data-testid="tweet"]) .r-qklmqi:has(div[data-testid="UserCell"])
@@ -44,5 +44,8 @@ twitter.com##.r-1ysxnx4.r-k0dy70.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08
 !twitter.com##.r-1adg3ll:has(div[aria-label="Timeline: Carousel"])
 twitter.com##div[aria-label^="Timeline:"]:not([aria-label$="Topics"]):not([aria-label$="Explore"]) .r-1adg3ll:has(a[href^="/i/"]:has-text(/^More Topics/i))
 
-! removes explore tab
+! removes "more tweets" (often found in a new thread). found by robonxt.
+twitter.com##.r-1adg3ll:has(h2:has-text(/^More Tweets/i))
+
+! removes "explore tab". remove this if you want to explore 😀
 twitter.com##[href="/explore" i]
