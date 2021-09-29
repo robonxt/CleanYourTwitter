@@ -10,7 +10,7 @@ Tested on uBlock Origin on Chrome. May work with other Adblockers and other brow
 
 Q: What is this?
 
-A: This is a adblock filter list to block annoying elements on Reddit.
+A: This is a adblock filter list to block annoying elements on Twitter.
 
 Q: How do I use it?
 
@@ -26,4 +26,4 @@ A: Feel free to make an issue, fork, or update the list to your liking.
 # WARNING: USE AT YOUR OWN RISK. I (robonxt) AM NOT RESPONSIBLE FOR ANY AFTEREFFECTS THIS LIST CAUSES.
 
 # Thanks
-A BIG THANK YOU to https://github.com/krisu5/ and the r/uBlockOrigin reddit community for doing the initial hard work on the different Twitter filters!
+A BIG THANK YOU to [u/krisu5](https://github.com/krisu5/) and the [r/uBlockOrigin](https://www.reddit.com/r/uBlockOrigin/) community for making the internet a safer and cleaner place!
