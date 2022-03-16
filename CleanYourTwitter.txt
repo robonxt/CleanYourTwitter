@@ -23,6 +23,7 @@ twitter.com##div[aria-label^="Timeline"]  > div > div :has-text(Who to follow)
 twitter.com##div[data-testid="sidebarColumn"] aside[role="complementary"][aria-label="Who to follow"] div:nth-ancestor(2)
 twitter.com##div[aria-label="Timeline: Trending now"]
 twitter.com##aside[aria-label="Who to follow"]
+twitter.com##.r-1udh08x.r-1bro5k0.r-1ifxtd0.r-rs99b7.r-1phboty.r-1867qdf.r-14wv3jr.r-g2wdr4.css-1dbjc4n
 
 ! removes "suggestions". thanks to krisu5 (https://github.com/krisu5/)
 twitter.com##body:has(div[aria-label^="Timeline: Search"]) .r-1adg3ll:has(a[href^="/search?q="][href$="&src=related_query_click"])
