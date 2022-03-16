@@ -41,6 +41,7 @@ twitter.com##div[aria-label$="trending now" i]
 !twitter.com##.r-1adg3ll:has(h2:has-text(/^Topics to follow/i))
 !use the below one to fix it temp?
 twitter.com##.r-1ysxnx4.r-k0dy70.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x 
+twitter.com##div.r-1udh08x.r-1ifxtd0.r-rs99b7.r-1phboty.r-1867qdf.r-14wv3jr.r-g2wdr4.css-1dbjc4n:nth-of-type(3)
 !twitter.com##.r-1adg3ll:has(div[aria-label="Timeline: Carousel"])
 twitter.com##div[aria-label^="Timeline:"]:not([aria-label$="Topics"]):not([aria-label$="Explore"]) .r-1adg3ll:has(a[href^="/i/"]:has-text(/^More Topics/i))
 
