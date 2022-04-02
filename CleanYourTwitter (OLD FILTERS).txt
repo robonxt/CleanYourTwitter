@@ -6,7 +6,7 @@
 
 ! !!! OLD FILTERS !!! !
 ! (OLD) Removes "promoted tweets (ads)". thanks to reddit.
-twitter.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert|Реклама/)
+twitter.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert|Реклама/) ! DON"T USE IT BROKEN!
 !twitter.com##[data-focusable="true"]:has-text(/Promoted|Gesponsert|Реклама/) ! doesn't work?
 !twitter.com##[data-focusable="false"]:has-text(/Promoted|Gesponsert|Реклама/) ! doesn't work?
 
