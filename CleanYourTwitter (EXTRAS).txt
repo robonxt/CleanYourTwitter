@@ -1,0 +1,27 @@
+! Title: CleanYourTwitter (EXTRAS)
+! Dev: robonxt
+! Description: Extra CleanYourTwitter filters. Optional filters that some people may like.
+! Homepage: https://github.com/robonxt/CleanYourTwitter
+! Last updated: April 02, 2022
+
+! !!! EXTRAS !!! !
+! Removes "explore tab". remove this if you want to explore 😀
+twitter.com##[href="/explore" i]
+
+! Removes [User] liked
+twitter.com##:is([aria-label="Timeline: Your Home Timeline"], [aria-label$="’s Tweets"]) article :not([role="button"]>div>div>svg>g>path)[d$="13.157H12z"]:upward(article)
+
+! Removes Relevant People on Sidebar
+!twitter.com##aside[aria-label*="Relevant people"]	! not working?
+twitter.com##aside[aria-label*="Relevant people"]:nth-ancestor(1)
+
+! [User] follows
+twitter.com##[aria-label="Timeline: Your Home Timeline"] article [d^="M12.225 12.165c-1.356"]:upward(article)
+
+
+! !!! I don't use !!! !
+! Removes [User] Retweeted
+!twitter.com##:is([aria-label="Timeline: Your Home Timeline"], [aria-label$="’s Tweets"]) article :not([data-testid="unretweet"]>div>div>svg>g>path)[d^="M23.615 15.477c"]:upward(article):not(:has([data-testid="socialContext"]:has-text(/^You/)))
+
+! Removes Like and Retweet counts | Remove ` [data-testid="app-text-transition-container"]` to hide entire buttons
+!twitter.com##[data-testid="retweet"] [data-testid="app-text-transition-container"], [data-testid="like"] [data-testid="app-text-transition-container"]

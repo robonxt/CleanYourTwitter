@@ -1,51 +1,29 @@
 ! Title: CleanYourTwitter
 ! Dev: robonxt
-! Description: Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening, and other annoyances.
+! Description: Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening, More Tweets, and other annoyances.
 ! Homepage: https://github.com/robonxt/CleanYourTwitter
-! Last updated: July 06, 2021
+! Last updated: April 02, 2022
 
 ! How to use: https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
 
-! Credits: A BIG THANK YOU to https://github.com/krisu5/ and the r/uBlockOrigin reddit community for doing the initial hard work on the different Twitter filters!
+! Credits: A BIG THANK YOU to https://github.com/krisu5/ for the initial filters and the r/uBlockOrigin reddit community for their work on the updated Twitter filters!
 
-! removes "promoted tweets (ads)". thanks to reddit.
-twitter.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert|Реклама/)
-!twitter.com##[data-focusable="true"]:has-text(/Promoted|Gesponsert|Реклама/)
-!twitter.com##[data-focusable="false"]:has-text(/Promoted|Gesponsert|Реклама/)
+! !!! TIMELINE !!! !
+! This part is updated from the reddit page https://www.reddit.com/r/uBlockOrigin/wiki/solutions#wiki_twitter. They updated it sometime in March 2022, so I'm testing this out!
+! My Timeline - no inserted sections (Who to follow/Topics to follow, etc.)
+twitter.com##[aria-label="Timeline: Your Home Timeline"] div[style^="transform: translateY"][style*="position: absolute;"]:not(:first-child:has-text(/^Show \d\d? Tweets?$/)):not(:has(>div:only-child:empty, article, [href^="/i/status/"], [role="progressbar"]))
+! Other Timelines - no inserted sections (Who to follow/Topics to follow, etc.)
+twitter.com##[aria-label$="’s Tweets"] div[style^="transform: translateY"][style*="position: absolute;"]:not(:has(>div:only-child:empty, article, [href^="/i/status/"], [role="progressbar"]))
+! Follow/Recommended Topic | "[Name of Topic] See more"
+twitter.com##article [aria-label^="Follow Topic"], [aria-label^="Recommended Topic" i]:upward(article)
+! More Tweets
+twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^More Tweets$/):upward([style^="transform"])
+twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^More Tweets$/):upward([style^="transform"])~div 
 
-! removes the "who to follow" section. thanks to reddit.
-twitter.com##div[aria-label$="Tweets"] [data-testid="UserCell"]
-twitter.com##div[aria-label$="Your Home Timeline"] [data-testid="UserCell"]
-twitter.com##div[aria-label$="Retweeted"] [data-testid="UserCell"]
-twitter.com##div[aria-label^="Timeline"] div [role="heading"]:has-text(Who to follow)
-twitter.com##div[aria-label^="Timeline"] [href^="/i/related_users"]
-twitter.com##div[aria-label^="Timeline"]  > div > div :has-text(Who to follow)
-twitter.com##div[data-testid="sidebarColumn"] aside[role="complementary"][aria-label="Who to follow"] div:nth-ancestor(2)
-twitter.com##div[aria-label="Timeline: Trending now"]
-twitter.com##aside[aria-label="Who to follow"]
-
-! removes "suggestions". thanks to krisu5 (https://github.com/krisu5/)
-twitter.com##body:has(div[aria-label^="Timeline: Search"]) .r-1adg3ll:has(a[href^="/search?q="][href$="&src=related_query_click"])
-twitter.com##body:not(:has(div[aria-label="Timeline: Explore"])) .r-qklmqi:has(span.r-1qd0xha:has-text(/^See more about this Topic/i))
-!twitter.com##div[data-testid="primaryColumn"] .css-1dbjc4n:has(div[data-testid="tweet"]) .r-qklmqi:has(div[data-testid="UserCell"])
-twitter.com##div[data-testid="sidebarColumn"] .r-t23y2h:has(div[aria-label="Timeline: Trending now"])
-!twitter.com##div[aria-label^="Timeline:"]:not([aria-label*="List"]) div[style^="position: absolute;"]:not(:has(article)):has(a[href^="/i/lists/"])
-twitter.com##div[aria-label^="Timeline:"]:not([aria-label$="Topics"]):not([aria-label$="Explore"]) .r-1adg3ll:has(a[href^="/i/"]:has-text(/^More Topics|Show more/i)):has(:not(span:has-text(/^Show more replies/i)))
-twitter.com##div[aria-label^="Timeline:"]:not([aria-label$="Topics"]) .r-qklmqi:has([aria-labelledby*="topic-not-interested-button"])
-twitter.com##div[aria-label="Timeline: Explore"] div[data-testid="UserCell"]:upward(2)
-!twitter.com##.r-1adg3ll:has(article[role="article"]:has-text(Promoted))
-twitter.com##.r-1adg3ll:has(a[href="/i/timeline"]):has(div:matches-css(min-width: 70px))
-twitter.com##.r-1adg3ll:has(div[aria-label="Timeline: Carousel"])
-twitter.com##.r-qklmqi:has(h2:has(span:has-text(/^People|More replies/i)))
-twitter.com##div[aria-label$="trending now" i]
-!twitter.com##.r-1adg3ll:has(h2:has-text(/^Topics to follow/i))
-!use the below one to fix it temp?
-twitter.com##.r-1ysxnx4.r-k0dy70.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x 
-!twitter.com##.r-1adg3ll:has(div[aria-label="Timeline: Carousel"])
-twitter.com##div[aria-label^="Timeline:"]:not([aria-label$="Topics"]):not([aria-label$="Explore"]) .r-1adg3ll:has(a[href^="/i/"]:has-text(/^More Topics/i))
-
-! removes "more tweets" (often found in a new thread). found by robonxt.
-twitter.com##.r-1adg3ll:has(h2:has-text(/^More Tweets/i))
-
-! removes "explore tab". remove this if you want to explore 😀
-twitter.com##[href="/explore" i]
+! !!! SIDEBAR !!! !
+! Sidebar - Topics to follow
+twitter.com##[data-testid="sidebarColumn"] [href="/i/topics/picker/home"]:upward(section)
+! Sidebar - Trending now/Trends for you
+twitter.com##[aria-label$="trending now" i]
+! Sidebar - Who to follow/You might like
+twitter.com##[aria-label="who to follow" i]:upward(1)
