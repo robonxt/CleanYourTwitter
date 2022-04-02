@@ -9,6 +9,9 @@
 ! Credits: A BIG THANK YOU to https://github.com/krisu5/ for the initial filters and the r/uBlockOrigin reddit community for their work on the updated Twitter filters!
 
 ! !!! TIMELINE !!! !
+! Removes "promoted tweets (ads)". thanks to reddit.
+twitter.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert|Реклама/)
+
 ! This part is updated from the reddit page https://www.reddit.com/r/uBlockOrigin/wiki/solutions#wiki_twitter. They updated it sometime in March 2022, so I'm testing this out!
 ! My Timeline - no inserted sections (Who to follow/Topics to follow, etc.)
 twitter.com##[aria-label="Timeline: Your Home Timeline"] div[style^="transform: translateY"][style*="position: absolute;"]:not(:first-child:has-text(/^Show \d\d? Tweets?$/)):not(:has(>div:only-child:empty, article, [href^="/i/status/"], [role="progressbar"]))
