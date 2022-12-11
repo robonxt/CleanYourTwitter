@@ -24,8 +24,11 @@ twitter.com##[aria-label$="’s Tweets"] div[style^="transform: translateY"][sty
 ! Follow/Recommended Topic | "[Name of Topic] See more"
 twitter.com##article [aria-label^="Follow Topic"], [aria-label^="Recommended Topic" i]:upward(article)
 ! More Tweets
-twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^More Tweets$/):upward([style^="transform"])
-twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^More Tweets$/):upward([style^="transform"])~div 
+!twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^More Tweets$/):upward([style^="transform"])
+!twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^More Tweets$/):upward([style^="transform"])~div 
+! Fixes More Tweets/Discover More. Found by https://github.com/TheOpponent
+twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^Discover more$/):upward([style^="transform"])
+twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^Discover more$/):upward([style^="transform"])~div
 
 ! !!! SIDEBAR !!! !
 ! Sidebar - Topics to follow
