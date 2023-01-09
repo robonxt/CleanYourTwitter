@@ -5,8 +5,12 @@
 ! Last updated: April 02, 2022
 
 ! !!! EXTRAS !!! !
-! Removes "explore tab". remove this if you want to explore 😀
+! Removes "Explore tab". Add a "!" to the front if you want to explore 😀
 twitter.com##[href="/explore" i]
+
+! Removes "Twitter Blue tab". Add a "!" to the front if you want to see the button to purchase Twitter Blue
+twitter.com##[href="/i/twitter_blue_sign_up" i]
+
 
 ! Removes [User] liked
 twitter.com##:is([aria-label="Timeline: Your Home Timeline"], [aria-label$="’s Tweets"]) article :not([role="button"]>div>div>svg>g>path)[d$="13.157H12z"]:upward(article)
