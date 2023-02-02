@@ -2,7 +2,7 @@
 ! Dev: robonxt
 ! Description: Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening, More Tweets, and other annoyances.
 ! Homepage: https://github.com/robonxt/CleanYourTwitter
-! Last updated: December 18, 2022
+! Last updated: February 2, 2023
 
 ! How to use: https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
 
@@ -33,7 +33,9 @@ twitter.com##[aria-label="Timeline: Conversation"] h2>div>span:has-text(/^Discov
 ! !!! SIDEBAR !!! !
 ! Sidebar - Topics to follow
 twitter.com##[data-testid="sidebarColumn"] [href="/i/topics/picker/home"]:upward(section)
+twitter.com###trends
 ! Sidebar - Trending now/Trends for you
 twitter.com##[aria-label$="trending now" i]
 ! Sidebar - Who to follow/You might like
 twitter.com##[aria-label="who to follow" i]:upward(1)
+twitter.com###wtf
