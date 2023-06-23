@@ -1,6 +1,5 @@
-### Note
-
-I've been using OldTwitter (a extension for web twitter), and I am no longer using this filter lists. I may update this from time to time, but feel free to keep improving it!
+>### Note
+>I've been using OldTwitter (a extension for web twitter), and I am no longer using this filter lists. I may update this from time to time, but feel free to keep improving it!
 
 # CleanYourTwitter: collection of web Twitter filters for a cleaner experience
 
