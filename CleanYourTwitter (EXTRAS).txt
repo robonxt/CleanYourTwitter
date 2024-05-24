@@ -2,7 +2,7 @@
 ! Dev: robonxt
 ! Description: Extra CleanYourTwitter filters. Optional filters that some people may like.
 ! Homepage: https://github.com/robonxt/CleanYourTwitter
-! Last updated: April 02, 2022
+! Last updated: May 24, 2024
 
 ! !!! EXTRAS !!! !
 ! Removes "Explore tab". Add a "!" to the front if you want to explore 😀
