@@ -2,8 +2,7 @@
 ! Dev: robonxt
 ! Description: Old CleanYourTwitter filters. Use this if the current filters does not work for you!
 ! Homepage: https://github.com/robonxt/CleanYourTwitter
-! Last updated: April 02, 2022
-
+! Last updated: May 24, 2024
 ! !!! OLD FILTERS !!! !
 ! (OLD) Removes "promoted tweets (ads)". thanks to reddit.
 x.com##[data-testid="tweet"]:has-text(/Promoted|Gesponsert|Реклама/) ! DON"T USE IT BROKEN!
