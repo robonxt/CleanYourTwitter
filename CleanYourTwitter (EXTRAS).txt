@@ -6,26 +6,26 @@
 
 ! !!! EXTRAS !!! !
 ! Removes "Explore tab". Add a "!" to the front if you want to explore 😀
-twitter.com##[href="/explore" i]
+x.com##[href="/explore" i]
 
 ! Removes "Twitter Blue tab". Add a "!" to the front if you want to see the button to purchase Twitter Blue
-twitter.com##[href="/i/twitter_blue_sign_up" i]
+x.com##[href="/i/twitter_blue_sign_up" i]
 
 
 ! Removes [User] liked
-twitter.com##:is([aria-label="Timeline: Your Home Timeline"], [aria-label$="’s Tweets"]) article :not([role="button"]>div>div>svg>g>path)[d$="13.157H12z"]:upward(article)
+x.com##:is([aria-label="Timeline: Your Home Timeline"], [aria-label$="’s Tweets"]) article :not([role="button"]>div>div>svg>g>path)[d$="13.157H12z"]:upward(article)
 
 ! Removes Relevant People on Sidebar
-!twitter.com##aside[aria-label*="Relevant people"]	! not working?
-twitter.com##aside[aria-label*="Relevant people"]:nth-ancestor(1)
+!x.com##aside[aria-label*="Relevant people"]	! not working?
+x.com##aside[aria-label*="Relevant people"]:nth-ancestor(1)
 
 ! [User] follows
-twitter.com##[aria-label="Timeline: Your Home Timeline"] article [d^="M12.225 12.165c-1.356"]:upward(article)
+x.com##[aria-label="Timeline: Your Home Timeline"] article [d^="M12.225 12.165c-1.356"]:upward(article)
 
 
 ! !!! I don't use !!! !
 ! Removes [User] Retweeted
-!twitter.com##:is([aria-label="Timeline: Your Home Timeline"], [aria-label$="’s Tweets"]) article :not([data-testid="unretweet"]>div>div>svg>g>path)[d^="M23.615 15.477c"]:upward(article):not(:has([data-testid="socialContext"]:has-text(/^You/)))
+!x.com##:is([aria-label="Timeline: Your Home Timeline"], [aria-label$="’s Tweets"]) article :not([data-testid="unretweet"]>div>div>svg>g>path)[d^="M23.615 15.477c"]:upward(article):not(:has([data-testid="socialContext"]:has-text(/^You/)))
 
 ! Removes Like and Retweet counts | Remove ` [data-testid="app-text-transition-container"]` to hide entire buttons
-!twitter.com##[data-testid="retweet"] [data-testid="app-text-transition-container"], [data-testid="like"] [data-testid="app-text-transition-container"]
+!x.com##[data-testid="retweet"] [data-testid="app-text-transition-container"], [data-testid="like"] [data-testid="app-text-transition-container"]
