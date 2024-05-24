@@ -1,9 +1,9 @@
 >### Note
->I've been using OldTwitter (a extension for web twitter), and I am no longer using this filter lists. I may update this from time to time, but feel free to keep improving it!
+>I've been using OldTwitter (a extension for web twitter), and I am no longer using this filter list. I may update this from time to time, but feel free to keep improving it!
 
-# CleanYourTwitter: collection of web Twitter filters for a cleaner experience
+# CleanYourTwitter: collection of  Twitter (Now known as X) web filters for a cleaner experience
 
-Adblock filters for Twitter. Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening, and other annoyances.
+Adblock filters for Twitter (Now known as X). Removes Promoted Tweets, You Might Like, Who to Follow, What's Happening, and other annoyances.
 
 Tested on uBlock Origin on Chrome. May work with other Adblockers and other browsers.
 
